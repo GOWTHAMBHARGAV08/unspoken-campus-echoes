@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,6 +7,8 @@ const Skills = () => {
   const technicalSkills = [
     { name: 'Python', level: 80 },
     { name: 'HTML/CSS', level: 70 },
+    { name: 'AI Usage', level: 80 },
+    { name: 'Problem Solving using AI', level: 90 },
   ];
 
   const tools = [

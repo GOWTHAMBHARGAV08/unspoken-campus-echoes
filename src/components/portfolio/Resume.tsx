@@ -18,7 +18,7 @@ const Resume = () => {
               <CardTitle className="text-2xl mb-4">Professional Resume</CardTitle>
               <p className="text-gray-600">
                 Download my complete resume with detailed information about my education, 
-                experience, skills, and achievements.
+                skills, and achievements.
               </p>
             </CardHeader>
             <CardContent className="text-center">
@@ -40,33 +40,25 @@ const Resume = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Education</h4>
                     <p className="text-gray-700 text-sm">
-                      B.Tech in [Your Branch]<br />
-                      [University Name]<br />
-                      Expected: [Year] | CGPA: [X.X]/10
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Experience</h4>
-                    <p className="text-gray-700 text-sm">
-                      • [Internship/Project Role]<br />
-                      • Academic Projects<br />
-                      • Freelance Work (if any)
+                      B.Tech in CSE (Computer Science Engineering)<br />
+                      Parul University<br />
+                      Expected: 2026 | CGPA: 6.05/10
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Key Skills</h4>
                     <p className="text-gray-700 text-sm">
-                      • Programming: Python, JavaScript<br />
-                      • AI/ML Fundamentals<br />
-                      • Web Development
+                      • Programming: Python, HTML/CSS<br />
+                      • AI Usage & Problem Solving<br />
+                      • Video Editing & Design Tools
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Languages</h4>
                     <p className="text-gray-700 text-sm">
                       • English (Fluent)<br />
-                      • [Native Language]<br />
-                      • [Other Languages]
+                      • Hindi<br />
+                      • Telugu
                     </p>
                   </div>
                 </div>

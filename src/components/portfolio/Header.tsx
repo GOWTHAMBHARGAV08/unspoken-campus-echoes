@@ -30,7 +30,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold text-primary">
-            Your Name
+            GOWTHAM BHARGAV
           </div>
 
           {/* Desktop Navigation */}
@@ -81,7 +81,7 @@ const Header = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
-                YN
+                GB
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">

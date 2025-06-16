@@ -15,7 +15,7 @@ const About = () => {
             <CardContent className="space-y-6">
               <div className="text-center">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                  [Your Full Name]
+                  GOWTHAM BHARGAV
                 </h3>
                 <p className="text-lg text-gray-600 mb-4">
                   Final Year B.Tech Student in [Your Branch]

@@ -26,57 +26,59 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary">
-            GOWTHAM BHARGAV
-          </div>
+    <>
+      <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <nav className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-2xl font-bold text-primary">
+              GOWTHAM BHARGAV
+            </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary transition-colors duration-200"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
-            <div className="flex flex-col space-y-2">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-6">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-gray-700 hover:text-primary transition-colors duration-200 py-2"
+                  className="text-gray-700 hover:text-primary transition-colors duration-200"
                 >
                   {item.name}
                 </button>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
           </div>
-        )}
-      </nav>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4">
+              <div className="flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-left text-gray-700 hover:text-primary transition-colors duration-200 py-2"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 px-4">
+      <section id="home" className="pt-32 pb-16 px-4 min-h-screen flex items-center">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
@@ -114,7 +116,7 @@ const Header = () => {
           </div>
         </div>
       </section>
-    </header>
+    </>
   );
 };
 

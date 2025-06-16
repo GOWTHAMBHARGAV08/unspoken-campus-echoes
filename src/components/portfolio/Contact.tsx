@@ -32,25 +32,25 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com'
+      value: 'gowthambharav619@gmail.com',
+      link: 'mailto:gowthambharav619@gmail.com'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: '/in/yourprofile',
-      link: 'https://linkedin.com/in/yourprofile'
+      value: '/in/gowtham-bhargav-562530353',
+      link: 'https://www.linkedin.com/in/gowtham-bhargav-562530353'
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: '/yourusername',
-      link: 'https://github.com/yourusername'
+      value: '/GOWTHAMBHARGAV08',
+      link: 'https://github.com/GOWTHAMBHARGAV08?tab=overview&from=2025-05-01&to=2025-05-31'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Your City, Country',
+      value: 'Vadodara, Gujarat',
       link: null
     }
   ];
@@ -183,7 +183,7 @@ const Contact = () => {
       <footer className="mt-16 pt-8 border-t border-gray-200">
         <div className="text-center">
           <p className="text-gray-600 text-sm">
-            © 2024 [Your Name]. Built with ❤️ using React and Tailwind CSS.
+            © 2024 Gowtham Bhargav. Built with ❤️ using React and Tailwind CSS.
           </p>
           <p className="text-gray-500 text-xs mt-2">
             Thank you for visiting my portfolio!

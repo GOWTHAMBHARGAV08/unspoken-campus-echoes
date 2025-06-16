@@ -41,8 +41,8 @@ const About = () => {
                     Quick Facts
                   </h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• 📍 Location: [Your City]</li>
-                    <li>• 🎓 Expected Graduation: [Year]</li>
+                    <li>• 📍 Location: VADODARA</li>
+                    <li>• 🎓 Expected Graduation: 2026</li>
                     <li>• 💼 Looking for: Internships/Entry-level roles</li>
                     <li>• 🌱 Currently Learning: AI/ML Technologies</li>
                   </ul>

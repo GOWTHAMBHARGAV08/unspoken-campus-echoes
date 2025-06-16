@@ -6,22 +6,16 @@ import { Progress } from '@/components/ui/progress';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'Python', level: 85 },
-    { name: 'HTML/CSS', level: 90 },
-    { name: 'JavaScript', level: 75 },
-    { name: 'React', level: 70 },
-    { name: 'Machine Learning', level: 65 },
-    { name: 'Data Analysis', level: 70 },
+    { name: 'Python', level: 80 },
+    { name: 'HTML/CSS', level: 70 },
   ];
 
   const tools = [
-    'ChatGPT', 'Canva', 'Notion', 'Git', 'VS Code', 'Jupyter Notebook',
-    'Google Colab', 'Figma', 'Adobe Photoshop', 'Microsoft Office'
+    'ChatGPT', 'Gemini', 'Canva', 'DaVinci Resolve', 'Premiere Pro', 'CapCut', 'VS Code', 'Lovable'
   ];
 
   const softSkills = [
-    'Communication', 'Teamwork', 'Problem Solving', 'Creativity',
-    'Leadership', 'Time Management', 'Adaptability', 'Critical Thinking'
+    'Communication', 'Teamwork', 'Creativity', 'Time Management', 'Critical Thinking'
   ];
 
   return (

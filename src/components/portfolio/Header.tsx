@@ -80,8 +80,12 @@ const Header = () => {
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
-                GB
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/dd27e75b-1268-4dd9-8597-ed76f9cd7fe8.png" 
+                  alt="Gowtham Bhargav"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">

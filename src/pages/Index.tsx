@@ -1,8 +1,8 @@
 
-import FilmBreakdown from '../components/FilmBreakdown';
+import Portfolio from '../components/Portfolio';
 
 const Index = () => {
-  return <FilmBreakdown />;
+  return <Portfolio />;
 };
 
 export default Index;

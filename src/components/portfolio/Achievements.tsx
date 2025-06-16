@@ -2,13 +2,13 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Certificate, Trophy, Star } from 'lucide-react';
+import { Award, FileText, Trophy, Star } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
     {
       category: 'Certifications',
-      icon: Certificate,
+      icon: FileText,
       items: [
         {
           title: 'Machine Learning Fundamentals',

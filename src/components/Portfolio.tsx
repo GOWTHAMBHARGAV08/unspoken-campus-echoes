@@ -3,7 +3,6 @@ import React from 'react';
 import Header from './portfolio/Header';
 import About from './portfolio/About';
 import Skills from './portfolio/Skills';
-import Projects from './portfolio/Projects';
 import Resume from './portfolio/Resume';
 import Achievements from './portfolio/Achievements';
 import Blog from './portfolio/Blog';
@@ -16,7 +15,6 @@ const Portfolio = () => {
       <main className="bg-black">
         <About />
         <Skills />
-        <Projects />
         <Resume />
         <Achievements />
         <Blog />

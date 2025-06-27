@@ -10,7 +10,6 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Resume', href: '#resume' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Blog', href: '#blog' },
@@ -103,7 +102,7 @@ const Header = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  onClick={() => scrollToSection('#projects')}
+                  onClick={() => scrollToSection('#about')}
                   className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4 rounded-md flex items-center gap-2"
                 >
                   <Play size={20} fill="white" />

@@ -2,14 +2,11 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 
 const Skills = () => {
   const technicalSkills = [
-    { name: 'Python', level: 80 },
-    { name: 'HTML/CSS', level: 70 },
-    { name: 'AI Usage', level: 80 },
-    { name: 'Problem Solving using AI', level: 90 },
+    'Python Programming', 'HTML/CSS', 'AI Usage', 'Problem Solving using AI', 
+    'Machine Learning', 'AI Agents'
   ];
 
   const tools = [
@@ -35,15 +32,11 @@ const Skills = () => {
                 <CardTitle className="text-xl text-center text-red-600">Technical Skills</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {technicalSkills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-sm font-medium text-white">{skill.name}</span>
-                        <span className="text-sm text-gray-400">{skill.level}%</span>
-                      </div>
-                      <Progress value={skill.level} className="h-2 bg-gray-800 [&>div]:bg-red-600" />
-                    </div>
+                    <Badge key={skill} className="text-sm bg-red-600 hover:bg-red-700 text-white">
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </CardContent>

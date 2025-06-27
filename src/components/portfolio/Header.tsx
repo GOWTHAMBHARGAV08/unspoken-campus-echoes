@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Play, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +15,6 @@ const Header = () => {
     { name: 'Achievements', href: '#achievements' },
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' },
-  ];
-
-  const profileImages = [
-    "/lovable-uploads/dd27e75b-1268-4dd9-8597-ed76f9cd7fe8.png",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
   ];
 
   const scrollToSection = (href: string) => {
@@ -130,34 +121,19 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Right side - Image Carousel */}
+            {/* Right side - Single Profile Image */}
             <div className="relative">
-              <Carousel className="w-full max-w-md mx-auto">
-                <CarouselContent>
-                  {profileImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative">
-                        <div className="aspect-square rounded-lg overflow-hidden shadow-2xl border-4 border-red-600">
-                          <img 
-                            src={image} 
-                            alt={`Gowtham Bhargav ${index + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="bg-black/50 border-gray-600 text-white hover:bg-black/70" />
-                <CarouselNext className="bg-black/50 border-gray-600 text-white hover:bg-black/70" />
-              </Carousel>
-              
-              {/* Image Gallery Indicators */}
-              <div className="flex justify-center mt-6 space-x-2">
-                {profileImages.map((_, index) => (
-                  <div key={index} className="w-2 h-2 bg-gray-600 rounded-full hover:bg-red-600 transition-colors cursor-pointer"></div>
-                ))}
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative">
+                  <div className="aspect-square rounded-lg overflow-hidden shadow-2xl border-4 border-red-600">
+                    <img 
+                      src="/lovable-uploads/dd27e75b-1268-4dd9-8597-ed76f9cd7fe8.png" 
+                      alt="Gowtham Bhargav"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                </div>
               </div>
             </div>
           </div>

@@ -14,8 +14,7 @@ const Projects = () => {
       technologies: ['Python', 'NLTK', 'Flask', 'HTML/CSS'],
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop',
       liveDemo: '#',
-      github: '#',
-      featured: true
+      github: '#'
     },
     {
       title: 'Portfolio Website',
@@ -23,8 +22,7 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
       liveDemo: '#',
-      github: '#',
-      featured: true
+      github: '#'
     },
     {
       title: 'Data Visualization Dashboard',
@@ -32,8 +30,7 @@ const Projects = () => {
       technologies: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
       liveDemo: '#',
-      github: '#',
-      featured: false
+      github: '#'
     },
     {
       title: 'Task Management App',
@@ -41,8 +38,7 @@ const Projects = () => {
       technologies: ['JavaScript', 'Local Storage', 'CSS3', 'HTML5'],
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop',
       liveDemo: '#',
-      github: '#',
-      featured: false
+      github: '#'
     }
   ];
 
@@ -51,7 +47,7 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Featured Projects
+            My Projects
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -67,12 +63,7 @@ const Projects = () => {
                   </AspectRatio>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-2">
-                    <CardTitle className="text-xl text-white">{project.title}</CardTitle>
-                    {project.featured && (
-                      <Badge className="ml-2 bg-red-600 hover:bg-red-700 text-white">Featured</Badge>
-                    )}
-                  </div>
+                  <CardTitle className="text-xl text-white mb-2">{project.title}</CardTitle>
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {project.description}
@@ -105,7 +96,12 @@ const Projects = () => {
             <p className="text-gray-300 mb-4">
               Want to see more? Check out my GitHub for additional projects and contributions.
             </p>
-            <Button variant="outline" size="lg" className="flex items-center gap-2 mx-auto border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="flex items-center gap-2 mx-auto border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
+              onClick={() => window.open('https://github.com/GOWTHAMBHARGAV08', '_blank')}
+            >
               <Github size={20} />
               View All Projects on GitHub
             </Button>

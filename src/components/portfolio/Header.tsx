@@ -209,7 +209,7 @@ const Header = () => {
                 >
                   <div className="aspect-square rounded-lg overflow-hidden shadow-2xl border-4 border-red-600">
                     <motion.img 
-                      src="/lovable-uploads/dd27e75b-1268-4dd9-8597-ed76f9cd7fe8.png" 
+                      src="/lovable-uploads/6c35532a-9a9c-409c-a062-bcf2bdac6992.png" 
                       alt="Gowtham Bhargav"
                       className="w-full h-full object-cover"
                       whileHover={{ scale: 1.1 }}

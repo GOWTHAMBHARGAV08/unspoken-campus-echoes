@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { Calendar, BookOpen } from 'lucide-react';
 
 const Blog = () => {
   const blogPosts = [
@@ -29,26 +29,26 @@ This journey has just begun. I'm constantly learning, building small projects, a
   ];
 
   return (
-    <section id="blog" className="py-16 px-4 bg-gray-50">
+    <section id="blog" className="py-16 px-4 bg-black">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Blog & Thoughts
           </h2>
           
           <div className="grid gap-8 max-w-4xl mx-auto">
             {blogPosts.map((post, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-900 border-gray-800">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
-                    <CardTitle className="text-xl leading-tight">
+                    <CardTitle className="text-xl leading-tight text-white">
                       {post.title}
                     </CardTitle>
                     {post.featured && (
-                      <Badge variant="default" className="ml-2 text-xs">Featured</Badge>
+                      <Badge className="ml-2 text-xs bg-red-600 hover:bg-red-700 text-white">Featured</Badge>
                     )}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
                     <Calendar size={14} />
                     <span>{new Date(post.date).toLocaleDateString()}</span>
                     <span>•</span>
@@ -56,7 +56,7 @@ This journey has just begun. I'm constantly learning, building small projects, a
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+                  <div className="prose prose-sm max-w-none text-gray-300 leading-relaxed">
                     <p className="mb-4">{post.excerpt}</p>
                     
                     <div className="whitespace-pre-line text-sm">
@@ -70,7 +70,7 @@ This journey has just begun. I'm constantly learning, building small projects, a
                   
                   <div className="flex flex-wrap gap-2 mt-6">
                     {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
+                      <Badge key={tag} className="text-xs bg-gray-800 text-gray-300 hover:bg-gray-700">
                         {tag}
                       </Badge>
                     ))}
@@ -81,17 +81,17 @@ This journey has just begun. I'm constantly learning, building small projects, a
           </div>
           
           <div className="text-center mt-12">
-            <Card className="max-w-2xl mx-auto p-6">
+            <Card className="max-w-2xl mx-auto p-6 bg-gray-900 border-gray-800">
               <CardContent className="text-center">
-                <BookOpen size={48} className="mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                <BookOpen size={48} className="mx-auto mb-4 text-red-600" />
+                <h3 className="text-xl font-semibold mb-2 text-white">
                   More Content Coming Soon
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   I regularly share insights about AI, technology, learning experiences, and personal growth. 
                   Stay tuned for more articles and tutorials!
                 </p>
-                <Button variant="outline" className="flex items-center gap-2 mx-auto">
+                <Button variant="outline" className="flex items-center gap-2 mx-auto border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white">
                   Subscribe to Updates
                 </Button>
               </CardContent>

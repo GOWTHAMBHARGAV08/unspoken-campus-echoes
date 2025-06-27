@@ -47,16 +47,16 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-4">
+    <section id="projects" className="py-16 px-4 bg-black">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Featured Projects
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-900 border-gray-800">
                 <CardHeader className="p-0">
                   <AspectRatio ratio={16 / 9}>
                     <img
@@ -68,30 +68,30 @@ const Projects = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-2">
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <CardTitle className="text-xl text-white">{project.title}</CardTitle>
                     {project.featured && (
-                      <Badge variant="default" className="ml-2">Featured</Badge>
+                      <Badge className="ml-2 bg-red-600 hover:bg-red-700 text-white">Featured</Badge>
                     )}
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
+                      <Badge key={tech} className="text-xs bg-gray-800 text-gray-300 hover:bg-gray-700">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                   
                   <div className="flex gap-3">
-                    <Button size="sm" className="flex items-center gap-2">
+                    <Button size="sm" className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white">
                       <ExternalLink size={16} />
                       Live Demo
                     </Button>
-                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                    <Button variant="outline" size="sm" className="flex items-center gap-2 border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white">
                       <Github size={16} />
                       Code
                     </Button>
@@ -102,10 +102,10 @@ const Projects = () => {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-300 mb-4">
               Want to see more? Check out my GitHub for additional projects and contributions.
             </p>
-            <Button variant="outline" size="lg" className="flex items-center gap-2 mx-auto">
+            <Button variant="outline" size="lg" className="flex items-center gap-2 mx-auto border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white">
               <Github size={20} />
               View All Projects on GitHub
             </Button>

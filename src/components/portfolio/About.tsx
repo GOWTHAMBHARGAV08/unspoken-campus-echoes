@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +7,36 @@ const About = () => {
   return (
     <section id="about" className="py-16 px-4 bg-black/90 backdrop-blur-sm relative overflow-hidden">
       <div className="container mx-auto">
+        {/* Left side Money Heist character */}
+        <motion.div 
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-32 h-48 z-0 opacity-90"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 0.9 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <img 
+            src="/lovable-uploads/82d4085f-9cc4-4f3c-bb82-25c779e947ea.png" 
+            alt="Money Heist Character Left"
+            className="w-full h-full object-contain"
+          />
+        </motion.div>
+
+        {/* Right side Money Heist character */}
+        <motion.div 
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-32 h-48 z-0 opacity-90"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 0.9 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <img 
+            src="/lovable-uploads/56bab2c6-b9df-4b15-9486-13809e91d648.png" 
+            alt="Money Heist Character Right"
+            className="w-full h-full object-contain"
+          />
+        </motion.div>
+
         <div className="max-w-4xl mx-auto relative z-10">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-white"

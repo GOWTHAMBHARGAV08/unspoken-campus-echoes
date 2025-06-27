@@ -23,9 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-    // You can integrate with a form service like Formspree, Netlify Forms, etc.
   };
 
   const contactInfo = [
@@ -56,20 +54,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 px-4">
+    <section id="contact" className="py-16 px-4 bg-black">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Get In Touch
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+              <h3 className="text-2xl font-semibold mb-6 text-white">
                 Let's Connect
               </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed">
                 I'm always open to discussing new opportunities, collaborations, or just having a 
                 chat about technology and innovation. Feel free to reach out through any of the 
                 channels below or use the contact form.
@@ -79,13 +77,13 @@ const Contact = () => {
                 {contactInfo.map((item, index) => {
                   const IconComponent = item.icon;
                   const content = (
-                    <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <IconComponent size={20} className="text-primary" />
+                    <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-800 transition-colors border border-gray-700">
+                      <div className="w-12 h-12 bg-red-600/20 rounded-lg flex items-center justify-center">
+                        <IconComponent size={20} className="text-red-500" />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{item.label}</p>
-                        <p className="text-gray-600 text-sm">{item.value}</p>
+                        <p className="font-medium text-white">{item.label}</p>
+                        <p className="text-gray-400 text-sm">{item.value}</p>
                       </div>
                     </div>
                   );
@@ -100,9 +98,9 @@ const Contact = () => {
                 })}
               </div>
               
-              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Quick Response Promise</h4>
-                <p className="text-gray-600 text-sm">
+              <div className="mt-8 p-6 bg-gradient-to-r from-red-600/20 to-gray-800/50 rounded-lg border border-gray-700">
+                <h4 className="font-semibold text-white mb-2">Quick Response Promise</h4>
+                <p className="text-gray-300 text-sm">
                   I typically respond to messages within 24 hours. If you don't hear back from me, 
                   please don't hesitate to follow up!
                 </p>
@@ -110,15 +108,15 @@ const Contact = () => {
             </div>
             
             {/* Contact Form */}
-            <Card className="shadow-lg">
+            <Card className="bg-gray-900 border-gray-700 shadow-2xl">
               <CardHeader>
-                <CardTitle className="text-xl">Send Me a Message</CardTitle>
+                <CardTitle className="text-xl text-white">Send Me a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Name *</Label>
+                      <Label htmlFor="name" className="text-gray-300">Name *</Label>
                       <Input
                         id="name"
                         name="name"
@@ -126,10 +124,11 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Your Name"
                         required
+                        className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email *</Label>
+                      <Label htmlFor="email" className="text-gray-300">Email *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -138,12 +137,13 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="your.email@example.com"
                         required
+                        className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <Label htmlFor="subject">Subject *</Label>
+                    <Label htmlFor="subject" className="text-gray-300">Subject *</Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -151,11 +151,12 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="What's this about?"
                       required
+                      className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="message" className="text-gray-300">Message *</Label>
                     <textarea
                       id="message"
                       name="message"
@@ -164,11 +165,11 @@ const Contact = () => {
                       placeholder="Tell me more about your project, opportunity, or just say hello!"
                       required
                       rows={5}
-                      className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex w-full rounded-md border border-gray-600 bg-gray-800 px-3 py-2 text-sm text-white ring-offset-background placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     />
                   </div>
                   
-                  <Button type="submit" size="lg" className="w-full flex items-center gap-2">
+                  <Button type="submit" size="lg" className="w-full flex items-center gap-2 bg-red-600 hover:bg-red-700">
                     <Send size={18} />
                     Send Message
                   </Button>
@@ -180,9 +181,9 @@ const Contact = () => {
       </div>
       
       {/* Footer */}
-      <footer className="mt-16 pt-8 border-t border-gray-200">
+      <footer className="mt-16 pt-8 border-t border-gray-800">
         <div className="text-center">
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-400 text-sm">
             © 2024 Gowtham Bhargav. Built with ❤️ using React and Tailwind CSS.
           </p>
           <p className="text-gray-500 text-xs mt-2">

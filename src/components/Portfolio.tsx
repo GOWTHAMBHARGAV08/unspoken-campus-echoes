@@ -11,9 +11,9 @@ import Contact from './portfolio/Contact';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-black text-white">
       <Header />
-      <main>
+      <main className="bg-black">
         <About />
         <Skills />
         <Projects />

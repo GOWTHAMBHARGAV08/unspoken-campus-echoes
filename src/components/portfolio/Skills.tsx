@@ -10,7 +10,7 @@ const Skills = () => {
   ];
 
   const tools = [
-    'ChatGPT', 'Gemini', 'Canva', 'DaVinci Resolve', 'Premiere Pro', 'CapCut', 'VS Code', 'Lovable'
+    'VS Code', 'ChatGPT', 'Gemini', 'Google AI Studio', 'Notebook LM', 'Lovable'
   ];
 
   const softSkills = [

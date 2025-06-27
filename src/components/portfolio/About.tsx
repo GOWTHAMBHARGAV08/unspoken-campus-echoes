@@ -18,7 +18,7 @@ const About = () => {
                   GOWTHAM BHARGAV
                 </h3>
                 <p className="text-lg text-gray-300 mb-4">
-                  Final Year B.Tech Student in [Your Branch]
+                  Final Year B.Tech Student in CSE
                 </p>
               </div>
               

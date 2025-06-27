@@ -4,8 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Download, FileText, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { downloadResumePDF } from '@/utils/resumePdfGenerator';
 
 const Resume = () => {
+  const handleDownload = () => {
+    downloadResumePDF();
+  };
+
   return (
     <section id="resume" className="py-16 px-4 bg-black">
       <div className="container mx-auto">
@@ -223,7 +228,11 @@ const Resume = () => {
                   <FileText size={48} className="text-white" />
                 </div>
                 <p className="text-sm text-gray-400 mb-4">PDF Format • Complete Resume</p>
-                <Button size="lg" className="flex items-center gap-2 mx-auto bg-red-600 hover:bg-red-700 text-white">
+                <Button 
+                  size="lg" 
+                  className="flex items-center gap-2 mx-auto bg-red-600 hover:bg-red-700 text-white"
+                  onClick={handleDownload}
+                >
                   <Download size={20} />
                   Download Resume
                 </Button>

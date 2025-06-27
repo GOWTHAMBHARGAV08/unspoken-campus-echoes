@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,7 +9,7 @@ const About = () => {
       <div className="container mx-auto">
         {/* Left side Money Heist character */}
         <motion.div 
-          className="absolute left-0 top-0 bottom-0 w-48 z-0 opacity-90"
+          className="absolute left-0 top-0 bottom-0 w-48 z-20 opacity-90"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 0.9 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -23,7 +24,7 @@ const About = () => {
 
         {/* Right side Money Heist character */}
         <motion.div 
-          className="absolute right-0 top-0 bottom-0 w-48 z-0 opacity-90"
+          className="absolute right-0 top-0 bottom-0 w-48 z-20 opacity-90"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 0.9 }}
           transition={{ duration: 1, delay: 0.4 }}

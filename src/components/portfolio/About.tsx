@@ -5,39 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   return (
-    <section id="about" className="py-16 px-4 bg-black/90 backdrop-blur-sm relative overflow-hidden">
+    <section id="about" className="py-16 px-4 bg-black/90 backdrop-blur-sm">
       <div className="container mx-auto">
-        {/* Left side Money Heist character */}
-        <motion.div 
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 w-32 h-48 z-0 opacity-20"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 0.2 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <img 
-            src="/lovable-uploads/a4196bb6-6061-4189-8dcb-db0f3843bc49.png" 
-            alt="Money Heist Character"
-            className="w-full h-full object-contain"
-          />
-        </motion.div>
-
-        {/* Right side Money Heist character */}
-        <motion.div 
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 scale-x-[-1] w-32 h-48 z-0 opacity-20"
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 0.2 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <img 
-            src="/lovable-uploads/a4196bb6-6061-4189-8dcb-db0f3843bc49.png" 
-            alt="Money Heist Character"
-            className="w-full h-full object-contain"
-          />
-        </motion.div>
-
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-white"
             initial={{ opacity: 0, y: 30 }}

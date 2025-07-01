@@ -4,11 +4,13 @@ import { motion } from 'framer-motion';
 import Header from './portfolio/Header';
 import About from './portfolio/About';
 import Skills from './portfolio/Skills';
+import Projects from './portfolio/Projects';
 import Resume from './portfolio/Resume';
 import Achievements from './portfolio/Achievements';
 import Blog from './portfolio/Blog';
 import Contact from './portfolio/Contact';
 import Background3D from './portfolio/Background3D';
+import BackToTop from './portfolio/BackToTop';
 
 const Portfolio = () => {
   return (
@@ -32,6 +34,15 @@ const Portfolio = () => {
             viewport={{ once: true }}
           >
             <Skills />
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Projects />
           </motion.div>
           
           <motion.div
@@ -70,6 +81,7 @@ const Portfolio = () => {
             <Contact />
           </motion.div>
         </main>
+        <BackToTop />
       </div>
     </div>
   );

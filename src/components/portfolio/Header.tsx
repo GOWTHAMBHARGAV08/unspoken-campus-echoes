@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Menu, X, Play, Info } from 'lucide-react';
@@ -17,6 +16,7 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Resume', href: '#resume' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Blog', href: '#blog' },

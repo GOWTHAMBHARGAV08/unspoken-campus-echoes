@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Menu, X, Play, Info } from 'lucide-react';
@@ -16,7 +17,6 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Resume', href: '#resume' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Blog', href: '#blog' },
@@ -106,11 +106,53 @@ const Header = () => {
         </nav>
       </motion.header>
 
-      {/* Netflix-style Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-b from-black via-gray-900 to-black">
+      {/* Cinematic Hero Section */}
+      <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+        {/* Enhanced cinematic background effects */}
         <motion.div 
           className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80"
           style={{ y, opacity }}
+        />
+        
+        {/* Floating particles effect */}
+        <motion.div 
+          className="absolute top-1/4 left-10 w-20 h-20 bg-red-600/20 rounded-full blur-xl"
+          animate={{ 
+            y: [0, -20, 0],
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-xl"
+          animate={{ 
+            y: [0, 20, 0],
+            scale: [1, 0.8, 1],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/4 w-16 h-16 bg-purple-600/20 rounded-full blur-xl"
+          animate={{ 
+            x: [0, 30, 0],
+            y: [0, -15, 0],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         />
         
         <div className="container mx-auto px-4 pt-20 relative z-10">
@@ -131,7 +173,7 @@ const Header = () => {
                 >
                   Welcome to My
                   <motion.span 
-                    className="text-red-600 block"
+                    className="text-red-600 block bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
@@ -171,7 +213,7 @@ const Header = () => {
                   <Button 
                     size="lg" 
                     onClick={() => scrollToSection('#about')}
-                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4 rounded-md flex items-center gap-2"
+                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4 rounded-md flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <Play size={20} fill="white" />
                     View My Work
@@ -185,7 +227,7 @@ const Header = () => {
                     variant="outline" 
                     size="lg" 
                     onClick={() => scrollToSection('#contact')}
-                    className="border-gray-400 text-gray-300 hover:bg-gray-800 hover:text-white text-lg px-8 py-4 flex items-center gap-2"
+                    className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/50 text-lg px-8 py-4 flex items-center gap-2 transition-all duration-300"
                   >
                     <Info size={20} />
                     More Info
@@ -194,7 +236,7 @@ const Header = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right side - Single Profile Image */}
+            {/* Right side - Profile Image */}
             <motion.div 
               className="relative"
               initial={{ opacity: 0, x: 100 }}
@@ -207,7 +249,7 @@ const Header = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300, damping: 10 }}
                 >
-                  <div className="aspect-square rounded-lg overflow-hidden shadow-2xl border-4 border-red-600">
+                  <div className="aspect-square rounded-lg overflow-hidden shadow-2xl border-4 border-red-600 relative">
                     <motion.img 
                       src="/lovable-uploads/6c35532a-9a9c-409c-a062-bcf2bdac6992.png" 
                       alt="Gowtham Bhargav"
@@ -215,39 +257,15 @@ const Header = () => {
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.5 }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-red-600/20 rounded-lg blur-xl -z-10"></div>
                 </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
-
-        {/* Animated floating elements */}
-        <motion.div 
-          className="absolute top-1/4 left-10 w-20 h-20 bg-red-600/20 rounded-full blur-xl"
-          animate={{ 
-            y: [0, -20, 0],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-xl"
-          animate={{ 
-            y: [0, 20, 0],
-            scale: [1, 0.8, 1]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
       </section>
     </>
   );

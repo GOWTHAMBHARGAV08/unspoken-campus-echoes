@@ -6,7 +6,7 @@ import * as THREE from 'three';
 const CinematicStars = () => {
   const ref = useRef<THREE.Points>(null);
   
-  const [sphere] = useMemo(() => {
+  const [positions, colors] = useMemo(() => {
     const positions = new Float32Array(12000 * 3);
     const colors = new Float32Array(12000 * 3);
     
@@ -59,7 +59,7 @@ const CinematicStars = () => {
 
   return (
     <group rotation={[0, 0, Math.PI / 8]}>
-      <Points ref={ref} positions={sphere[0]} stride={3} frustumCulled={false}>
+      <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
           vertexColors
